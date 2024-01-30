@@ -5,7 +5,7 @@ const AllBlogs = () => {
     const [ blogs, setBlogs ] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3003/api/get-all-blogs')
+    fetch('https://eclectic-crisp-1b148d.netlify.app/api/get-all-blogs')
       .then(response => response.json())
       .then(res => setBlogs(res)) 
 
@@ -13,7 +13,7 @@ const AllBlogs = () => {
 
   const handleDelete = (id) => {
     console.log("clicked", id)
-    fetch(`http://localhost:3003/api/delete/${id}`, {
+    fetch(`https://eclectic-crisp-1b148d.netlify.app/api/delete/${id}`, {
       method: "DELETE"
     });
 
